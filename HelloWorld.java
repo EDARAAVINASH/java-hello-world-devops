@@ -6,7 +6,8 @@ class HelloWorld {
 
         // Example operation (change this as needed: +, -, *, /)
         char operation = '+';
-
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
         double result;
 
         System.out.println("Number 1: " + num1);
