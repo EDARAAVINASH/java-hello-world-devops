@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class HelloWorld {
     public static void main(String[] args) throws FileNotFoundException {
-        File file = new File("input.txt");
+        File file = new File("\Users\M.TEJA PRAKASH\OneDrive\Desktop\java_prog\file.txt");
         Scanner scanner = new Scanner(file);
 
         int num1 = scanner.nextInt();
