@@ -1,4 +1,4 @@
-public class BasicCalculator {
+class HelloWorld {
     public static void main(String[] args) {
         // Predefined numbers
         double num1 = 12.5;
