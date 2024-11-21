@@ -1,47 +1,16 @@
+import java.io.File;
+import java.io.FileNotFoundException;
 import java.util.Scanner;
-class HelloWorld {
-    public static void main(String[] args) {
-        // Predefined numbers
-        double num1 = 12.5;
-        double num2 = 3.5;
 
-        // Example operation (change this as needed: +, -, *, /)
-        char operation = '+';
-        Scanner sc=new Scanner(System.in);
-        int n=sc.nextInt();
-        double result;
+public class HelloWorld {
+    public static void main(String[] args) throws FileNotFoundException {
+        File file = new File("input.txt");
+        Scanner scanner = new Scanner(file);
 
-        System.out.println("Number 1: " + num1);
-        System.out.println("Number 2: " + num2);
-        System.out.println("Operation: " + operation);
+        int num1 = scanner.nextInt();
+        int num2 = scanner.nextInt();
+        System.out.println("Sum: " + (num1 + num2));
 
-        switch (operation) {
-            case '+':
-                result = num1 + num2;
-                System.out.println("Result: " + result);
-                break;
-
-            case '-':
-                result = num1 - num2;
-                System.out.println("Result: " + result);
-                break;
-
-            case '*':
-                result = num1 * num2;
-                System.out.println("Result: " + result);
-                break;
-
-            case '/':
-                if (num2 != 0) {
-                    result = num1 / num2;
-                    System.out.println("Result: " + result);
-                } else {
-                    System.out.println("Error: Division by zero is not allowed.");
-                }
-                break;
-
-            default:
-                System.out.println("Invalid operation. Please use +, -, *, or /.");
-        }
+        scanner.close();
     }
 }
